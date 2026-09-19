@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -9,15 +9,7 @@
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 20px;
-        background: #f5f5f5;
-    }
-
-    .panel {
-        background: #e8e8e8;
-        padding: 16px;
-        border-radius: 8px;
-        width: 100%;
-        box-sizing: border-box;
+        background: white; /* pure white brand background */
     }
 
     h2 {
@@ -33,7 +25,7 @@
 
     #display {
         font-size: 32px;
-        padding: 12px 20px;
+        padding: 12px 20px; /* right padding fixed */
         background: white;
         border: 1px solid #ccc;
         border-radius: 6px;
@@ -54,7 +46,7 @@
         border: none;
         border-radius: 6px;
         cursor: pointer;
-        display: inline-block;
+        display: inline-block; /* button only as wide as text */
         text-align: left;
     }
 
@@ -64,7 +56,7 @@
     }
 
     #stopBtn {
-        background: #666;   /* changed from red to gray */
+        background: #666; /* neutral gray */
         color: white;
     }
 
@@ -80,17 +72,15 @@
 </head>
 <body>
 
-<div class="panel">
-    <h2>MicroTimer</h2>
+<h2>MicroTimer</h2>
 
-    <div id="label">Seconds</div>
-    <div id="display">0</div>
+<div id="label">Seconds</div>
+<div id="display">0</div>
 
-    <div class="row">
-        <button id="startBtn" onclick="startTimer()">Start</button>
-        <button id="stopBtn" onclick="stopTimer()">Stop</button>
-        <button id="resetBtn" onclick="resetTimer()">Reset</button>
-    </div>
+<div class="row">
+    <button id="startBtn" onclick="startTimer()">Start</button>
+    <button id="stopBtn" onclick="stopTimer()">Stop</button>
+    <button id="resetBtn" onclick="resetTimer()">Reset</button>
 </div>
 
 <script>
