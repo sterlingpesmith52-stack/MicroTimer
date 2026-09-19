@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -58,6 +59,12 @@
         cursor: pointer;
     }
 
+    #stop {
+        background: #d9534f; /* red stop button */
+        color: white;
+        margin-left: 10px;
+    }
+
     #reset {
         background: #666;
         color: white;
@@ -79,6 +86,7 @@
     <input id="display" type="text" value="0" readonly>
 
     <button id="start">Start</button>
+    <button id="stop">Stop</button>
     <button id="reset">Reset</button>
 </div>
 
@@ -92,6 +100,11 @@
             count++;
             document.getElementById("display").value = count;
         }, 1000);
+    });
+
+    document.getElementById("stop").addEventListener("click", () => {
+        clearInterval(timer);
+        timer = null;
     });
 
     document.getElementById("reset").addEventListener("click", () => {
