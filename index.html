@@ -10,8 +10,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
-    padding-bottom: 140px;
-    background: white;
+    padding-bottom: 120px;
+    background: #ffffff;
 }
 
 .header-row {
@@ -47,13 +47,12 @@ body {
 }
 
 #display {
-    font-size: 72px;
+    font-size: 48px;
     font-weight: 700;
+    line-height: 1;
     border: none;
     background: white;
-    padding: 0;
     margin-bottom: 40px;
-    line-height: 1;
 }
 
 .row {
@@ -63,14 +62,16 @@ body {
     gap: 16px;
 }
 
-button {
-    width: 220px;
-    height: 86px;
+/* Unified MicroFoundary button styling */
+button,
+.buy-btn {
+    padding: 18px 48px;
     font-size: 18px;
     font-weight: 700;
     border: none;
     border-radius: 12px;
     cursor: pointer;
+    width: auto;
 }
 
 #startBtn,
@@ -82,11 +83,12 @@ button {
 }
 
 #resetBtn {
-    background: #000;
+    background: #000000;
     color: white;
 }
 
-button:active {
+button:active,
+.buy-btn:active {
     opacity: 0.85;
 }
 
@@ -96,12 +98,6 @@ button:active {
     left: 50%;
     transform: translateX(-50%);
     z-index: 1000;
-}
-
-/* Same size as every other button */
-.buy-btn {
-    width: 220px;
-    height: 86px;
 }
 </style>
 </head>
@@ -165,6 +161,15 @@ function resetTimer() {
 
 function copyTime() {
     navigator.clipboard.writeText(count.toString());
+
+    const btn = document.getElementById("copyBtn");
+    const original = btn.textContent;
+
+    btn.textContent = "Copied!";
+    
+    setTimeout(() => {
+        btn.textContent = original;
+    }, 1500);
 }
 </script>
 
