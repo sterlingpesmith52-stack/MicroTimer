@@ -6,99 +6,96 @@
 <title>MicroTimer</title>
 
 <style>
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-    padding-bottom: 120px;
-    background: #fff;
+body{
+    font-family:Arial,sans-serif;
+    margin:0;
+    padding:20px;
+    padding-bottom:120px;
+    background:#fff;
 }
 
-.header-row {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 20px;
+.header-row{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    margin-bottom:20px;
 }
 
-.logo {
-    width: 128px;
-    height: auto;
-    margin-bottom: 10px;
+.logo{
+    width:128px;
+    height:auto;
+    max-width:none;
+    margin-bottom:10px;
 }
 
-.title {
-    font-size: 24px;
-    font-weight: 700;
-    text-align: left;
+.title{
+    font-size:24px;
+    font-weight:700;
+    text-align:left;
 }
 
-.tagline {
-    font-size: 14px;
-    color: #666;
-    margin-top: 6px;
+.tagline{
+    font-size:14px;
+    color:#666;
+    margin-top:6px;
 }
 
-#label {
-    font-size: 16px;
-    margin-top: 40px;
-    margin-bottom: 10px;
+#label{
+    font-size:16px;
+    margin-top:40px;
+    margin-bottom:10px;
 }
 
-#display {
-    font-size: 42px;
-    font-weight: 700;
-    line-height: 1;
-    margin-bottom: 30px;
+#display{
+    font-size:42px;
+    font-weight:700;
+    line-height:1;
+    margin-bottom:30px;
 }
 
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    align-items: center;
+.row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    align-items:center;
 }
 
-/* PulseCounter-sized buttons */
+/* PulseCounter / Decider style */
 button,
-.buy-btn {
-    padding: 10px 18px;
-    font-size: 18px;
-    font-weight: 700;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    white-space: nowrap;
+.buy-btn{
+    padding:8px 16px;
+    font-size:16px;
+    font-weight:700;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    white-space:nowrap;
 }
 
 #startBtn,
 #stopBtn,
 #copyBtn,
-.buy-btn {
-    background: #1877f2;
-    color: #fff;
+.buy-btn{
+    background:#1877f2;
+    color:#fff;
 }
 
-#resetBtn {
-    background: #000;
-    color: #fff;
+#resetBtn{
+    background:#000;
+    color:#fff;
 }
 
 button:active,
-.buy-btn:active {
-    opacity: .85;
+.buy-btn:active{
+    opacity:.85;
 }
 
-.buy-footer {
-    position: fixed;
-    left: 50%;
-    bottom: 20px;
-    transform: translateX(-50%);
-    z-index: 1000;
-}
-
-.buy-btn {
-    display: inline-block;
+.buy-footer{
+    position:fixed;
+    bottom:20px;
+    left:50%;
+    transform:translateX(-50%);
+    z-index:1000;
 }
 </style>
 </head>
@@ -108,7 +105,9 @@ button:active,
 <div class="header-row">
     <img src="./IMG_1741.jpeg" class="logo" alt="MicroFoundary Logo">
 
-    <div class="title">MicroTimer</div>
+    <div class="title">
+        MicroTimer
+    </div>
 
     <div class="tagline">
         Simple stopwatch for quick timing.
@@ -127,7 +126,9 @@ button:active,
 </div>
 
 <div class="buy-footer">
-    <button class="buy-btn">Buy This Tool</button>
+    <button class="buy-btn">
+        Buy This Tool
+    </button>
 </div>
 
 <script>
