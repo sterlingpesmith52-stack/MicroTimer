@@ -11,7 +11,7 @@ body {
     margin: 0;
     padding: 20px;
     padding-bottom: 120px;
-    background: #ffffff;
+    background: #fff;
 }
 
 .header-row {
@@ -24,7 +24,6 @@ body {
 .logo {
     width: 128px;
     height: auto;
-    max-width: none;
     margin-bottom: 10px;
 }
 
@@ -47,28 +46,27 @@ body {
 }
 
 #display {
-    font-size: 48px;
+    font-size: 42px;
     font-weight: 700;
     line-height: 1;
-    border: none;
-    background: white;
     margin-bottom: 30px;
 }
 
 .row {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
 }
 
+/* PulseCounter-sized buttons */
 button,
 .buy-btn {
-    padding: 12px 24px;
+    padding: 10px 18px;
     font-size: 18px;
     font-weight: 700;
     border: none;
-    border-radius: 12px;
+    border-radius: 10px;
     cursor: pointer;
     white-space: nowrap;
 }
@@ -77,27 +75,30 @@ button,
 #stopBtn,
 #copyBtn,
 .buy-btn {
-    background: #0078ff;
-    color: white;
+    background: #1877f2;
+    color: #fff;
 }
 
 #resetBtn {
-    background: #000000;
-    color: white;
+    background: #000;
+    color: #fff;
 }
 
 button:active,
 .buy-btn:active {
-    opacity: 0.85;
+    opacity: .85;
 }
 
 .buy-footer {
     position: fixed;
-    bottom: 20px;
     left: 50%;
+    bottom: 20px;
     transform: translateX(-50%);
-    width: max-content;
     z-index: 1000;
+}
+
+.buy-btn {
+    display: inline-block;
 }
 </style>
 </head>
@@ -126,9 +127,7 @@ button:active,
 </div>
 
 <div class="buy-footer">
-    <button class="buy-btn">
-        Buy This Tool
-    </button>
+    <button class="buy-btn">Buy This Tool</button>
 </div>
 
 <script>
@@ -163,12 +162,12 @@ function copyTime() {
     navigator.clipboard.writeText(count.toString());
 
     const btn = document.getElementById("copyBtn");
-    const original = btn.textContent;
+    const originalText = btn.textContent;
 
     btn.textContent = "Copied!";
 
     setTimeout(() => {
-        btn.textContent = original;
+        btn.textContent = originalText;
     }, 1500);
 }
 </script>
