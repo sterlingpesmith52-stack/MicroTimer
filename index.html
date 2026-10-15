@@ -52,26 +52,25 @@ body {
     line-height: 1;
     border: none;
     background: white;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 .row {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 16px;
+    gap: 12px;
 }
 
-/* Unified MicroFoundary button styling */
 button,
 .buy-btn {
-    padding: 18px 48px;
+    padding: 12px 24px;
     font-size: 18px;
     font-weight: 700;
     border: none;
     border-radius: 12px;
     cursor: pointer;
-    width: auto;
+    white-space: nowrap;
 }
 
 #startBtn,
@@ -97,6 +96,7 @@ button:active,
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
+    width: max-content;
     z-index: 1000;
 }
 </style>
@@ -166,7 +166,7 @@ function copyTime() {
     const original = btn.textContent;
 
     btn.textContent = "Copied!";
-    
+
     setTimeout(() => {
         btn.textContent = original;
     }, 1500);
