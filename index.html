@@ -56,27 +56,29 @@ body{
 .row{
     display:flex;
     flex-wrap:wrap;
-    gap:8px;
+    gap:12px;
     align-items:center;
 }
 
-/* PulseCounter / Decider style */
+/* Official MicroFoundary Decider Button Standard */
 button,
 .buy-btn{
-    padding:8px 16px;
+    padding:12px 24px;
     font-size:16px;
     font-weight:700;
     border:none;
-    border-radius:10px;
+    border-radius:12px;
     cursor:pointer;
     white-space:nowrap;
+    min-height:48px;
+    transition:opacity .2s ease;
 }
 
 #startBtn,
 #stopBtn,
 #copyBtn,
 .buy-btn{
-    background:#1877f2;
+    background:#1677ff;
     color:#fff;
 }
 
@@ -92,10 +94,18 @@ button:active,
 
 .buy-footer{
     position:fixed;
-    bottom:20px;
     left:50%;
     transform:translateX(-50%);
+    bottom:20px;
     z-index:1000;
+}
+
+.buy-btn{
+    min-width:220px;
+}
+
+.input-focused .buy-footer{
+    display:none;
 }
 </style>
 </head>
@@ -103,7 +113,7 @@ button:active,
 <body>
 
 <div class="header-row">
-    <img src="./IMG_1741.jpeg" class="logo" alt="MicroFoundary Logo">
+    <img src="./IMG_1741.JPEG" class="logo" alt="MicroFoundary Logo">
 
     <div class="title">
         MicroTimer
@@ -171,6 +181,16 @@ function copyTime() {
         btn.textContent = originalText;
     }, 1500);
 }
+
+document.querySelectorAll("input, textarea").forEach(el => {
+    el.addEventListener("focus", () => {
+        document.body.classList.add("input-focused");
+    });
+
+    el.addEventListener("blur", () => {
+        document.body.classList.remove("input-focused");
+    });
+});
 </script>
 
 </body>
